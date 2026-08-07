@@ -1,18 +1,12 @@
 # 🚗 汽车维保顾问 Skill - GitHub 推送指南
 
-## ✅ 已完成步骤
+## ✅ 当前状态
 
-Git 仓库已初始化并提交：
-- SKILL.md (主文档)
-- README.md (项目介绍)
-- references/car-insurance-guide.md
-- references/maintenance-intervals.md
-- PUSH_GUIDE.md
-- PUSH_STATUS.md
+Git 仓库已初始化并提交了所有文件。
 
 ## ⚠️ 需要先创建 GitHub 仓库
 
-远程仓库不存在，请先在 GitHub 上创建：
+远程仓库不存在，请先在 GitHub 上创建仓库：
 
 ### 步骤 1：创建 GitHub 仓库
 
@@ -24,16 +18,9 @@ Git 仓库已初始化并提交：
    - **不要勾选** "Initialize this repository with a README"
 3. 点击 "Create repository"
 
-### 步骤 2：获取仓库地址
+### 步骤 2：执行推送命令
 
-创建成功后，复制仓库地址：
-```
-https://github.com/opsyang2076-cloud/car-maintenance-skills.git
-```
-
-### 步骤 3：推送代码
-
-在终端运行：
+创建仓库后，在终端运行以下命令：
 
 ```bash
 cd "C:/Users/一天能吃三顿饭/AppData/Local/hermes/skills/automotive/car-maintenance-advisor/"
@@ -41,14 +28,11 @@ cd "C:/Users/一天能吃三顿饭/AppData/Local/hermes/skills/automotive/car-ma
 # 添加远程仓库
 git remote add origin https://github.com/opsyang2076-cloud/car-maintenance-skills.git
 
-# 重命名分支
-git branch -M main
-
-# 推送到 GitHub
+# 推送代码
 git push -u origin main
 ```
 
-### 步骤 4：认证
+### 步骤 3：认证
 
 推送时会提示输入：
 - **Username**: `opsyang2076-cloud`
@@ -68,6 +52,12 @@ git push -u origin main
 - **位置**: C:\Users\一天能吃三顿饭\AppData\Local\hermes\skills\automotive\car-maintenance-advisor\
 - **提交**: 1 个
 - **文件**: 6 个
+  - SKILL.md (主文档)
+  - README.md (项目介绍)
+  - references/car-insurance-guide.md
+  - references/maintenance-intervals.md
+  - PUSH_GUIDE.md
+  - PUSH_STATUS.md
 - **语言**: 中文
 
 ## 🎯 功能
