@@ -1,20 +1,20 @@
 ---
 name: car-maintenance-advisor
 description: "根据车型手册给出维修保养与保险综合建议。"
-version: 0.1.0
+version: 0.2.0
 author: Hermes Agent
 license: MIT
 metadata:
   hermes:
-    tags: [car, maintenance, repair, insurance, automotive, chinese]
+    tags: [car, maintenance, repair, insurance, automotive, chinese, diagnosis, used-car, seasonal, ev, claims]
     related_skills: []
 ---
 
 # 汽车维保顾问 Skill
 
-面向中国车主的一站式维修保养 + 保险推荐工具。输入行驶里程、车辆品牌型号、上次保养日期/里程后，基于各品牌官方操作手册（Owner's Manual）规范与汽修行业共识，输出下一次保养项目及各大服务商的综合比价。
+面向中国车主的一站式维修保养 + 保险 + 故障诊断 + 二手车评估 + 季节性养护 + 新能源专属 + 出险理赔实战工具。输入行驶里程、车辆品牌型号、上次保养日期/里程后，基于各品牌官方操作手册（Owner's Manual）规范与汽修行业共识，输出下一次保养项目及各大服务商的综合比价；并按需联动故障诊断、养车成本估算、二手车评估、季节性保养、新能源专属指引、出险理赔实战六大拓展模块。
 
-**不做什么：** 不替代专业技师诊断；不做事故定损或理赔谈判指导。当涉及异响、故障灯等异常时，会建议尽快到店检测。
+**不做什么：** 不替代专业技师现场诊断；不出具法律意见；不做新车选车对比或改装建议。当涉及异响、故障灯等异常时，先按故障诊断模块给出分级与缓行就医建议，必要时建议尽快到店检测。
 
 ## When to Use
 
@@ -23,12 +23,36 @@ metadata:
 - 用户想了解不同维修渠道（4S店/连锁修理厂/路边店）的价格差异
 - 用户想优化车险方案（三者额度/附加险选择）
 - 用户刚买车或刚过户，需要完整的维保路线图
-- **Don't use for:** 二手车估值（非核心能力）、购车选车对比、改装建议
+- 用户报告异响/故障灯/异味/抖动等异常，要求初步判断
+- 用户想估算月度/年度养车全成本（含折旧等隐性）
+- 用户考虑买二手车，要做 VIN 查询/调表识别/事故痕迹判断/价格锚点
+- 用户想按季节/地区做预防性保养（入冬前换防冻液、夏季防自燃等）
+- 用户开新能源车，要查三电质保条款/电池 SOH/充电桩/衰减索赔
+- 用户刚出事故，要现场处置话术/定损博弈/代位追偿/拒赔应对/私了临界值
+- **Don't use for:** 新车选车对比、改装建议、法律意见、事故定损最终裁定（这些应交专业机构）
 
 ## Prerequisites
 
 - 网络访问：通过 web_search / web_extract 查询最新保养项目单价和服务商报价
 - 无需额外安装 CLI 或 API Key
+
+## 参考资料路由
+
+本 Skill 除主流程外，按用户场景加载对应参考文档：
+
+| 场景 | 加载文档 |
+|------|---------|
+| 保养间隔与品牌专属规则 | [references/maintenance-intervals.md](references/maintenance-intervals.md) |
+| 车险买什么、续保策略、NCD | [references/car-insurance-guide.md](references/car-insurance-guide.md) |
+| 异响/故障灯/异味/抖动/渗油等异常初判 | [references/fault-diagnosis.md](references/fault-diagnosis.md) |
+| 月度/年度养车成本估算（含折旧等隐性） | [references/ownership-cost.md](references/ownership-cost.md) |
+| 二手车 VIN 查询/调表识别/事故痕迹/价格锚点 | [references/used-car-evaluation.md](references/used-car-evaluation.md) |
+| 季节性预防保养（春夏秋冬+地区气候） | [references/seasonal-maintenance.md](references/seasonal-maintenance.md) |
+| 新能源车三电/质保/充电/衰减索赔 | [references/ev-specific-guide.md](references/ev-specific-guide.md) |
+| 出险理赔实战（报案/定损/代位/拒赔/私了） | [references/claims-practical-guide.md](references/claims-practical-guide.md) |
+| 单一品牌的保养规格/通病/4S 推销项/三电质保 | [references/brands/*.md](references/brands/)（按品牌加载对应文件） |
+
+> 路由规则：用户描述的车型若在 `references/brands/` 下有对应品牌文档，则保养间隔、油液规格、通病速查、4S 过度推销项、三电质保条款一律以该品牌文档为准；通用项回退到 `maintenance-intervals.md`。
 
 ## Procedure
 
