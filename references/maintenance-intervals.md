@@ -1,8 +1,3 @@
----
-name: car-maintenance-advisor
-file_path: references/maintenance-intervals.md
----
-
 # 各品牌保养周期速查表
 
 > 所有数据来自公开可用的《车主手册》摘要及行业共识。具体车型请以车主手册为准。
@@ -106,7 +101,7 @@ file_path: references/maintenance-intervals.md
 |------|-----------|---------|
 | 机油+机滤 | 15,000 km 或 12 月 | 15,000 km 或 12 月 |
 | 空气滤芯 | 30,000 km | 30,000 km |
-| 火花塞 | 80,000 mi (≈130,000 km) | 80,000 mi |
+| 火花塞 | 130,000 km | 130,000 km |
 | 刹车油 | 3 年或 60,000 km | 3 年 |
 | 变速箱油(AT) | 150,000 km 或 5 年 | 90,000 km 或 3 年 |
 

@@ -1,8 +1,3 @@
----
-name: car-maintenance-advisor
-file_path: references/car-insurance-guide.md
----
-
 # 车险购买与推荐指南
 
 > 基于2020年车险综合改革（综改）后的最新条款体系。

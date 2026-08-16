@@ -71,7 +71,7 @@ car-maintenance-advisor/
 ### 推送命令
 
 ```bash
-cd "C:/Users/一天能吃三顿饭/AppData/Local/hermes/skills/automotive/car-maintenance-advisor/"
+cd "D:/软件/Hermes/skills/car-maintenance-skills"
 
 # 拉取并合并
 git pull origin main --allow-unrelated-histories --no-rebase

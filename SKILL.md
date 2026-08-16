@@ -4,7 +4,6 @@ description: "根据车型手册给出维修保养与保险综合建议。"
 version: 0.1.0
 author: Hermes Agent
 license: MIT
-platforms: [linux, macos, windows]
 metadata:
   hermes:
     tags: [car, maintenance, repair, insurance, automotive, chinese]
@@ -78,9 +77,9 @@ metadata:
 - **日产/英菲尼迪：** CVT变扭器油每 40,000 km；e-Power车型的逆变器维护不可忽略。
 - **美系（通用/Cadillac）：** 每 75,000 mi 换火花塞；ATF Dexron III/VI 油品注意匹配。
 
-#### 恶劣工况折扣系数
+#### 恶劣工况缩短系数
 
-如果用户回答用车性质为「出租车/网约车/常走工地/严重拥堵地区/极寒或极热地区」，将上述所有间隔乘以 **0.6~0.7**。
+如果用户回答用车性质为「出租车/网约车/常走工地/严重拥堵地区/极寒或极热地区」，将上述所有保养间隔缩短至原值的 **60%–70%**（即更频繁保养）。
 
 > **完成标准：** 输出明确的保养级别及具体项目清单。
 
